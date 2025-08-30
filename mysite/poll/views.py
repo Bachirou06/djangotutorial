@@ -10,12 +10,12 @@ def details(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
 
 # using get_object_or_404()
-def detail(request, question_id):
+def detailss(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, "poll/detail.html", {"question": question })
 
 # Rendering the template using try ... except to raise the hhtp-404
-def detailss(request, question_id):
+def detail(request, question_id):
     try:
         question = Question.objects.get(pk=question_id)
     except Question.DoesNotExist:
