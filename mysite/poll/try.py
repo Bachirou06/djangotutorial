@@ -21,3 +21,4 @@ def indexxx(request, question_id):
     return render(request, "poll/indexx.html", {"latest_question_list": latest_question_list})
 
 <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+
